@@ -15,18 +15,22 @@ class Veiculo:
     def detalhar(self):
         return f"Marca: {self.marca}, Modelo: {self.modelo}"
     
-class carro(Veiculo):
+class Carro(Veiculo):
         def __init__(self, marca, modelo, numero_portas):
              super().__init__(marca, modelo)
              self.numero_portas = numero_portas
         
         def detalhar(self):
-             return f"Marca: {self.modelo}. Numeros de portas:{self.numero_portas}"
+             return (f"Marca: {self.marca} \n" 
+                     f"Modelo: {self.modelo} \n" 
+                     f"Números de portas:{self.numero_portas}")
         
-class moto(Veiculo):
-     def __init__(self, elétrica, pedal, tipo_partida):
-         super().__init__(elétrica, pedal)
+class Moto(Veiculo):
+     def __init__(self, marca, modelo, tipo_partida):
+         super().__init__(marca, modelo)
          self.tipo_partida = tipo_partida
 
      def detalhar(self):
-          return f"Modelo: {self.modelo}, Tipo de partida: {self.tipo_partida} "
+          return (f"Marca: {self.marca} \n" 
+                  f"Modelo: {self.modelo} \n"
+                  f"Tipo de partida: {self.tipo_partida} ")

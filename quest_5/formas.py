@@ -4,9 +4,22 @@
 # Implemente o método calcular_area() em cada uma das subclasses para que retorne a área correta de acordo com suas propriedades. 
 # Para o círculo, considere usar 3.14 como valor de PI.
 
-class base:
-    def __init__(self, forma):
-        self.forma = forma
+class Forma:
+    def calcular_area(self):
+        raise NotImplementedError("O método calcular_area() deve ser implementado nas subclasses.")
+
+class Retangulo(Forma):
+    def __init__(self, base, altura):
+        self.base = base 
+        self.altura = altura 
 
     def calcular_area(self):
-        self.forma 
+        return self.base * self.altura
+
+class Circulo(Forma):
+    def __init__(self,raio):
+        self.raio = raio 
+        
+    def calcular_area(self):
+         return 3.14 * (self.raio ** 2)
+      
